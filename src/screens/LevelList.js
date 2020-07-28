@@ -13,13 +13,24 @@ import {connect} from 'react-redux';
 import RippleButton from '../components/RippleButton';
 import ArrowBack from '../assets/arrow_back.svg';
 
-const levels = [
-  {
-    id: 1,
-    img: '',
-    name: 'Nivel 1',
-  },
-];
+const data = {
+  description:
+    'Es una herramienta que se utiliza para hacer el trazado de las curvas a nivel en áreas productivas con pendientes.',
+  materials: [
+    '2 reglas o varas rectas de 2.10 metros',
+    '1 regla o vara recta de 1.2 metros',
+    '1 cuerda de 1.2 metros de largo',
+    '1 objeto o 1 piedra que sirva de plomada o nivel pequeño',
+    '3 clavos',
+  ],
+  question:
+    'Es una herramienta que se utiliza para hacer el trazado de las curvas a nivel en áreas productivas con pendientes',
+  answers: [
+    {title: 'Aparato A', isCorrect: true},
+    {title: 'Nivel de manguera', isCorrect: false},
+    {title: 'Aparato X', isCorrect: false},
+  ],
+};
 
 const {width} = Dimensions.get('screen');
 const imageURL =
@@ -56,7 +67,12 @@ const LevelList = ({navigation}) => {
               width: width * 0.9,
               height: 200,
             }}>
-            <RippleButton color="white" borderRadius={10} onPress={() => {}}>
+            <RippleButton
+              color="white"
+              borderRadius={10}
+              onPress={() => {
+                navigation.navigate('Theory', data);
+              }}>
               <Image
                 source={require('../assets/02.png')}
                 style={{

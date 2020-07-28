@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import {store, persistor} from './store';
 import Home from './src/screens/Home';
 import LevelList from './src/screens/LevelList';
+import Theory from './src/screens/Theory';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +19,7 @@ const App = () => {
           <Stack.Navigator screenOptions={{headerShown: false}}>
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="LevelList" component={LevelList} />
+            <Stack.Screen name="Theory" component={Theory} />
           </Stack.Navigator>
         </NavigationContainer>
       </PersistGate>

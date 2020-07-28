@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import {TapGestureHandler, State} from 'react-native-gesture-handler';
 import Animated, {
   eq,
@@ -18,7 +18,6 @@ import {
   withTransition,
   mix,
 } from 'react-native-redash';
-import Color from 'color';
 
 export default function RippleButton({onPress, color, borderRadius, children}) {
   const [radius, setRadius] = useState(-1);
@@ -54,7 +53,7 @@ export default function RippleButton({onPress, color, borderRadius, children}) {
             <Animated.View
               style={{
                 opacity,
-                backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                backgroundColor: 'rgba(128,128,128, 0.15)',
                 borderRadius: radius,
                 width: radius * 2,
                 height: radius * 2,

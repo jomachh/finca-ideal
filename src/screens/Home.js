@@ -6,26 +6,48 @@ import {
   StatusBar,
   StyleSheet,
   Dimensions,
+  ImageBackground,
 } from 'react-native';
+import {connect} from 'react-redux';
+import {store} from '../../store';
 import RippleButton from '../components/RippleButton';
 
-const Home = () => {
+const Home = ({game, navigation}) => {
   return (
     <>
-      <StatusBar backgroundColor="#2b580c" barStyle="light-content" />
+      <StatusBar
+        translucent
+        backgroundColor="transparent"
+        barStyle="dark-content"
+      />
+
       <SafeAreaView>
-        <View style={styles.container}>
+        <ImageBackground
+          style={styles.container}
+          source={require('../assets/background.jpg')}>
           <View style={styles.body}>
             <RippleButton
-              onPress={() => console.log('Crack')}
+              onPress={() => {
+                store.dispatch({
+                  type: 'INIT_GAME',
+                  payload: {
+                    initGame: {
+                      started: true,
+                    },
+                  },
+                });
+                navigation.navigate('LevelList');
+              }}
               color="#639a67"
               borderRadius={5}>
               <View style={styles.touchable}>
-                <Text style={{textAlign: 'center'}}>Hola munndoo!</Text>
+                <Text style={styles.buttonText}>
+                  {game.started ? 'CONTINUAR' : 'INICIAR'}
+                </Text>
               </View>
             </RippleButton>
           </View>
-        </View>
+        </ImageBackground>
       </SafeAreaView>
     </>
   );
@@ -50,6 +72,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
   },
+  buttonText: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
 });
 
-export default Home;
+const mapStateToProps = (state) => ({
+  game: state.initGame,
+});
+
+export default connect(mapStateToProps)(Home);

@@ -98,6 +98,27 @@ const Theory = ({route, navigation}) => {
             style={styles.illustration}
             source={require('../assets/02.png')}
           />
+          <RippleButton
+            color="#2b580c"
+            borderRadius={5}
+            onPress={() => {
+              navigation.navigate('Questionary', {
+                question: route.params.question,
+                answers: route.params.answers,
+              });
+            }}>
+            <View
+              style={{
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: 50,
+                width: 150,
+              }}>
+              <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20}}>
+                Continuar
+              </Text>
+            </View>
+          </RippleButton>
           <View style={{paddingBottom: 100}} />
         </ScrollView>
       </View>
@@ -125,6 +146,7 @@ const styles = StyleSheet.create({
   illustration: {
     height: 250,
     resizeMode: 'contain',
+    marginBottom: 20,
   },
 });
 

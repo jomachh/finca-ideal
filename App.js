@@ -8,6 +8,7 @@ import {store, persistor} from './store';
 import Home from './src/screens/Home';
 import LevelList from './src/screens/LevelList';
 import Theory from './src/screens/Theory';
+import Questionary from './src/screens/Questionary';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ const App = () => {
             <Stack.Screen name="Home" component={Home} />
             <Stack.Screen name="LevelList" component={LevelList} />
             <Stack.Screen name="Theory" component={Theory} />
+            <Stack.Screen name="Questionary" component={Questionary} />
           </Stack.Navigator>
         </NavigationContainer>
       </PersistGate>

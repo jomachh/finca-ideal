@@ -30,7 +30,7 @@ const Theory = ({route, navigation}) => {
             </RippleButton>
           </View>
           <View>
-            <Text style={styles.headerTitle}>Aparato A</Text>
+            <Text style={styles.headerTitle}>{route.params.title}</Text>
           </View>
         </View>
         <ScrollView
@@ -73,6 +73,7 @@ const Theory = ({route, navigation}) => {
           {route.params.materials.map((material, index) => {
             return (
               <Text
+                key={index}
                 style={{
                   width: '100%',
                   fontSize: 20,
@@ -94,17 +95,13 @@ const Theory = ({route, navigation}) => {
             }}>
             Ilustración
           </Text>
-          <Image
-            style={styles.illustration}
-            source={require('../assets/02.png')}
-          />
+          <Image style={styles.illustration} source={route.params.coverImage} />
           <RippleButton
             color="#2b580c"
             borderRadius={5}
             onPress={() => {
               navigation.navigate('Questionary', {
-                question: route.params.question,
-                answers: route.params.answers,
+                questions: route.params.questions,
               });
             }}>
             <View

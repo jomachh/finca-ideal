@@ -7,34 +7,13 @@ import {
   Dimensions,
   Image,
   StatusBar,
-  SafeAreaView,
 } from 'react-native';
 import {connect} from 'react-redux';
+import {data} from '../constants/practices';
 import RippleButton from '../components/RippleButton';
 import ArrowBack from '../assets/arrow_back.svg';
 
-const data = {
-  description:
-    'Es una herramienta que se utiliza para hacer el trazado de las curvas a nivel en áreas productivas con pendientes.',
-  materials: [
-    '2 reglas o varas rectas de 2.10 metros',
-    '1 regla o vara recta de 1.2 metros',
-    '1 cuerda de 1.2 metros de largo',
-    '1 objeto o 1 piedra que sirva de plomada o nivel pequeño',
-    '3 clavos',
-  ],
-  question:
-    'Es una herramienta que se utiliza para hacer el trazado de las curvas a nivel en áreas productivas con pendientes',
-  answers: [
-    {title: 'Aparato A', isCorrect: true},
-    {title: 'Nivel de manguera', isCorrect: false},
-    {title: 'Aparato X', isCorrect: false},
-  ],
-};
-
 const {width} = Dimensions.get('screen');
-const imageURL =
-  'https://previews.123rf.com/images/tigatelu/tigatelu1604/tigatelu160400121/56170769-vector-illustration-of-farm-background.jpg';
 
 const LevelList = ({navigation}) => {
   return (
@@ -55,43 +34,48 @@ const LevelList = ({navigation}) => {
             </RippleButton>
           </View>
           <View>
-            <Text style={styles.headerTitle}>Niveles</Text>
+            <Text style={styles.headerTitle}>Prácticas</Text>
           </View>
         </View>
         <ScrollView
           contentContainerStyle={{
             alignItems: 'center',
           }}>
-          <View
-            style={{
-              width: width * 0.9,
-              height: 200,
-            }}>
-            <RippleButton
-              color="white"
-              borderRadius={10}
-              onPress={() => {
-                navigation.navigate('Theory', data);
-              }}>
-              <Image
-                source={require('../assets/02.png')}
+          {data.practices.map((practice, index) => {
+            return (
+              <View
+                key={index}
                 style={{
-                  height: 200 * 0.7,
                   width: width * 0.9,
-                  resizeMode: 'contain',
-                }}
-              />
-              <Text
-                style={{
-                  fontSize: 20,
-                  fontWeight: 'bold',
-                  padding: 10,
-                  textAlign: 'center',
+                  height: 200,
                 }}>
-                Aparato A
-              </Text>
-            </RippleButton>
-          </View>
+                <RippleButton
+                  color="white"
+                  borderRadius={10}
+                  onPress={() => {
+                    navigation.navigate('Theory', practice);
+                  }}>
+                  <Image
+                    source={practice.coverImage}
+                    style={{
+                      height: 200 * 0.7,
+                      width: width * 0.9,
+                      resizeMode: 'contain',
+                    }}
+                  />
+                  <Text
+                    style={{
+                      fontSize: 20,
+                      fontWeight: 'bold',
+                      padding: 10,
+                      textAlign: 'center',
+                    }}>
+                    {practice.title}
+                  </Text>
+                </RippleButton>
+              </View>
+            );
+          })}
         </ScrollView>
       </View>
     </>

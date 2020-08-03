@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
@@ -14,13 +14,22 @@ import ArrowBack from '../assets/arrow_back.svg';
 
 const Questionary = ({route, navigation}) => {
   const [showAlert, setShowAlert] = useState(false);
-
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [questionsLength, setQuestionsLength] = useState(
+    route.params.questions.length - 1,
+  );
   const {width, height} = Dimensions.get('screen');
 
   const hideAlert = () => {
     setShowAlert(false);
     navigation.goBack();
   };
+
+  useEffect(() => {
+    if (currentQuestion > questionsLength) {
+      navigation.popToTop();
+    }
+  }, [currentQuestion]);
 
   return (
     <>
@@ -43,59 +52,74 @@ const Questionary = ({route, navigation}) => {
             <Text style={styles.headerTitle}>Cuestionario</Text>
           </View>
         </View>
-        <Text
-          style={{
-            textAlign: 'center',
-            color: 'white',
-            fontWeight: 'bold',
-            fontSize: 18,
-          }}>
-          {route.params.question}
-        </Text>
-        <AwesomeAlert
-          show={showAlert}
-          showProgress={false}
-          title="!Ups¡"
-          message="No contestaste correctamente, intenta de nuevo."
-          closeOnTouchOutside={true}
-          closeOnHardwareBackPress={false}
-          showCancelButton={false}
-          showConfirmButton={true}
-          confirmText="Intentar de nuevo"
-          confirmButtonColor="#DD6B55"
-          onConfirmPressed={() => {
-            hideAlert();
-          }}
-        />
-        <ScrollView
-          contentContainerStyle={{
-            backgroundColor: '#d9bf77',
-            borderRadius: 10,
-            margin: 10,
-            padding: 5,
-          }}>
-          <Text style={{color: 'white', fontSize: 18, paddingVertical: 10}}>
-            Seleccioná una respuesta:
-          </Text>
-          {route.params.answers.map((answer, index) => {
-            return (
-              <RippleButton
-                key={index}
-                onPress={() => {
-                  if (answer.isCorrect) {
-                    navigation.popToTop();
-                  } else {
-                    setShowAlert(true);
-                  }
+
+        {route.params.questions.map((question, index) => {
+          return index == currentQuestion ? (
+            <>
+              <Text
+                style={{
+                  textAlign: 'center',
+                  color: 'white',
+                  fontWeight: 'bold',
+                  fontSize: 18,
+                }}>
+                {question.title}
+              </Text>
+              <AwesomeAlert
+                show={showAlert}
+                showProgress={false}
+                title="!Ups¡"
+                message="No contestaste correctamente, intenta de nuevo."
+                closeOnTouchOutside={true}
+                closeOnHardwareBackPress={false}
+                showCancelButton={false}
+                showConfirmButton={true}
+                confirmText="Intentar de nuevo"
+                confirmButtonColor="#DD6B55"
+                onConfirmPressed={() => {
+                  hideAlert();
+                }}
+              />
+              <ScrollView
+                contentContainerStyle={{
+                  backgroundColor: '#d9bf77',
+                  borderRadius: 10,
+                  margin: 10,
+                  padding: 5,
                 }}>
                 <Text
                   style={{color: 'white', fontSize: 18, paddingVertical: 10}}>
-                  • {answer.title}
+                  Seleccioná una respuesta:
                 </Text>
-              </RippleButton>
-            );
-          })}
-        </ScrollView>
+                {question.answers.map((answer, index) => {
+                  return (
+                    <RippleButton
+                      key={index}
+                      onPress={() => {
+                        if (answer.isCorrect) {
+                          console.log(questionsLength);
+                          console.log(index);
+                          setCurrentQuestion(currentQuestion + 1);
+                        } else {
+                          setShowAlert(true);
+                        }
+                      }}>
+                      <Text
+                        style={{
+                          color: 'white',
+                          fontSize: 18,
+                          paddingVertical: 10,
+                        }}>
+                        • {answer.title}
+                      </Text>
+                    </RippleButton>
+                  );
+                })}
+              </ScrollView>
+            </>
+          ) : null;
+        })}
+
         <Image
           source={require('../assets/pm.png')}
           style={{

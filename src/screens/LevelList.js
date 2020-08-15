@@ -47,7 +47,7 @@ const LevelList = ({navigation}) => {
                 key={index}
                 style={{
                   width: width * 0.9,
-                  height: 200,
+                  marginBottom: 10,
                 }}>
                 <RippleButton
                   color="white"
@@ -64,6 +64,7 @@ const LevelList = ({navigation}) => {
                     }}
                   />
                   <Text
+                    adjustsFontSizeToFit={true}
                     style={{
                       fontSize: 20,
                       fontWeight: 'bold',

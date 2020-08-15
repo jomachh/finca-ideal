@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Dimensions,
   ImageBackground,
+  Image,
 } from 'react-native';
 import {connect} from 'react-redux';
 import {store} from '../../store';
@@ -26,6 +27,7 @@ const Home = ({game, navigation}) => {
           style={styles.container}
           source={require('../assets/background.jpg')}>
           <View style={styles.body}>
+            <Image style={styles.logo} source={require('../assets/logo.png')} />
             <RippleButton
               onPress={() => {
                 store.dispatch({
@@ -46,6 +48,10 @@ const Home = ({game, navigation}) => {
                 </Text>
               </View>
             </RippleButton>
+            <Image
+              style={[styles.logo, {opacity: 0.0}]}
+              source={require('../assets/logo.png')}
+            />
           </View>
         </ImageBackground>
       </SafeAreaView>
@@ -61,7 +67,7 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
   },
   touchable: {
@@ -76,6 +82,11 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     fontSize: 20,
+  },
+  logo: {
+    marginTop: 100,
+    borderRadius: 5,
+    resizeMode: 'contain',
   },
 });
 

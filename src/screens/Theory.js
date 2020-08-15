@@ -6,9 +6,12 @@ import {
   StyleSheet,
   ScrollView,
   Image,
+  Dimensions,
 } from 'react-native';
 import RippleButton from '../components/RippleButton';
 import ArrowBack from '../assets/arrow_back.svg';
+
+const {width} = Dimensions.get('screen');
 
 const Theory = ({route, navigation}) => {
   console.log(route.params);
@@ -30,7 +33,12 @@ const Theory = ({route, navigation}) => {
             </RippleButton>
           </View>
           <View>
-            <Text style={styles.headerTitle}>{route.params.title}</Text>
+            <Text
+              numberOfLines={1}
+              adjustsFontSizeToFit={true}
+              style={styles.headerTitle}>
+              {route.params.title}
+            </Text>
           </View>
         </View>
         <ScrollView
@@ -134,7 +142,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 10,
   },
-  headerTitle: {color: 'white', fontSize: 45, marginStart: 10},
+  headerTitle: {
+    color: 'white',
+    fontSize: 45,
+    marginStart: 10,
+    marginEnd: 10,
+    maxWidth: width - 100,
+  },
   fab: {
     height: 50,
     justifyContent: 'center',

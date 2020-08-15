@@ -77,6 +77,7 @@ const LevelList = ({navigation}) => {
               </View>
             );
           })}
+          <View style={{height: 100}} />
         </ScrollView>
       </View>
     </>

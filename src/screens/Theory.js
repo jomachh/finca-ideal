@@ -76,7 +76,7 @@ const Theory = ({route, navigation}) => {
               color: 'white',
               fontWeight: 'bold',
             }}>
-            Materiales
+            {route.params.materials.length > 0 ? 'Materiales' : null}
           </Text>
           {route.params.materials.map((material, index) => {
             return (

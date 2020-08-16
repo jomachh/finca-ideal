@@ -68,7 +68,7 @@ export const data = {
     {
       id: 3,
       title: 'Barreras muertas',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/03.jpg'),
       description:
         'Las barreras muertas son muros de piedras o de rastrojos, colocados conforme a las curvas a nivel y sirven para disminuir la velocidad del agua de escorrentía y evitar la erosión de los suelos; esta buena práctica facilita la infiltración del agua de lluvia y del terreno y del tipo de suelo. Deben utilizarse en terrenos en donde exista material inerte para tales fines como: Rocas, Piedras, hojas y tallos de bananos, Troncos, ramas, árboles, y restos y cosecha.',
       materials: [
@@ -98,7 +98,7 @@ export const data = {
     {
       id: 4,
       title: 'Barreras vivas',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/04.jpg'),
       description:
         'Barreras vivas son hileras de plantas perennes o semi- perennes con crecimiento denso sembradas perpendiculares a la pendiente, en combinación con algunas obras de conservación de suelos como acequias de ladera Estas obras tienen como principal función disminuir la pérdida de Suelo debido a que interceptan el agua de lluvia reduciendo su velocidad.',
       materials: [
@@ -129,7 +129,7 @@ export const data = {
     {
       id: 5,
       title: 'Fosas de infiltración',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/05.png'),
       description:
         'La zanja de infiltración es una excavación en el terreno, que se establece en zonas de baja precipitación para acumular el agua de lluvia, permitiendo una mayor infiltración de ésta en el perfil del suelo y proporcionando humedad a las plantas establecidas en los bordes de ellas, en periodos de lluvias escasas.',
       materials: [
@@ -151,7 +151,7 @@ export const data = {
     {
       id: 6,
       title: 'Lombricultura, lombricompuesto, lombrihumus o humus de lombriz',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/06.png'),
       description:
         'Es una tecnología basada en la cría intensiva de lombrices para la producción de humus (Se llama humus a la materia orgánica degradada a su último estado de descomposición por efecto de microorganismos) a partir de un sustrato orgánico. Es un proceso de descomposición natural, similar al compostaje, en el que el material orgánico, además de ser atacado por los microorganismos (hongos, bacterias, actinomicetos, levaduras, etc.) existentes en el medio natural, también lo es por el complejo sistema digestivo de la lombriz.',
       materials: [
@@ -179,7 +179,7 @@ export const data = {
     {
       id: 7,
       title: 'Cortinas Rompe viento',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/07.png'),
       description:
         'Son hileras de árboles o arbustos de diferentes alturas que forman una barrera y constituyen un obstáculo , opuesta a la dirección predominante del viento, Se conocen también como barreras rompevientos, setos vivos o fajas de albergue, por refugiar a cierto tipo de fauna.',
       materials: [
@@ -206,7 +206,7 @@ export const data = {
     {
       id: 8,
       title: 'Biointensivos',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/08.jpg'),
       description:
         'Método de Cultivo Biointensivo es un método de agricultura ecológica sustentable de pequeña escala enfocado al autoconsumo y a la mini- comercialización. Aprovecha la naturaleza para obtener altos rendimientos de producción en poco espacio con un bajo consumo de agua, Utilizando semillas criollas y solamente unos pocos fertilizantes orgánicos, el método es casi totalmente sustentable .Se basa en varios principios que pueden ser adaptados a cualquier clima e implementados con técnicas realizadas a mano usando herramientas sencillas. El resultado es una agricultura ecológica que no solo produce alimentos nutritivos y orgánicos, sino también reconstruye y mejora la fertilidad del suelo. El método brinda una solución a la seguridad alimentaria familiar y a la soberanía alimentaria frente a los grandes problemas que amenazan a los pueblos de todo el mundo, la contaminación y destrucción del medioambiente, el agotamiento de los recursos naturales, la dependencia de los combustibles fósiles y el cambio climático. Con este énfasis, el método se ha desarrollado para poder cultivar todos los alimentos para una dieta completa y nutritiva en el espacio más reducido posible. Esta práctica está basada en los siguientes principios.',
       materials: [
@@ -283,7 +283,7 @@ export const data = {
     {
       id: 10,
       title: 'Regeneración Natural',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/10.png'),
       description:
         'Regeneración natural es igual a como su nombre lo dice es un proceso natural mediante el cual una área desnuda vuelve a poblarse de árboles en un proceso conocido como sucesión vegetal o le podemos llamar recuperación del bosque.',
       materials: [
@@ -307,7 +307,7 @@ export const data = {
     {
       id: 11,
       title: 'Cosecha de agua',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/11.jpg'),
       description:
         'La cosecha de agua se define como la recolección del vital líquido derivado de las lluvias para usarlo con fines productivos. ... El uso de agua de lluvia para cubrir las necesidades de producción agrícola es una estrategia que se ha practicado desde hace miles de años, especialmente en zonas rurales.',
       materials: [],
@@ -351,7 +351,7 @@ export const data = {
     {
       id: 13,
       title: 'Reforestación',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/13.png'),
       description:
         'Se define como la acción de sembrar árboles en áreas de importancia ambiental o de vocación forestal, como fuentes de agua, zonas con altas pendientes con el objetivo de restablecer la cobertura vegetal o para fines comerciales (leña o madera).',
       materials: ['Plantas', 'Barra', 'Coba', 'Palin'],

@@ -46,23 +46,6 @@ export const data = {
             {title: 'Aparato X', isCorrect: false},
           ],
         },
-        {
-          title: 'Esta esa una pregunta de prueba',
-          answers: [
-            {title: 'Aparato A', isCorrect: false},
-            {title: 'Nivel de manguera', isCorrect: true},
-            {title: 'Aparato X', isCorrect: false},
-          ],
-        },
-        {
-          title: 'Esta esa otra pregunta de prueba',
-          answers: [
-            {title: 'Aparato A', isCorrect: false},
-            {title: 'Nivel de manguera', isCorrect: true},
-            {title: 'Aparato X', isCorrect: false},
-            {title: 'Aparato Y', isCorrect: false},
-          ],
-        },
       ],
     },
     {

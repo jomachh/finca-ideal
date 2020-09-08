@@ -1,17 +1,21 @@
 export const data = {
   practices: [
     {
-      id: 1,
-      title: 'Plan de Manejo sostenible de finca',
-      coverImage: require('../assets/01.png'),
+      id: 1, //Identificador de la práctica
+      title: 'Plan de Manejo sostenible de finca', //Titulo de la practica
+      coverImage: require('../assets/01.png'), //Imagen de la practica
+      //Descripcion de la practica
       description:
         'Es una herramienta de planificación y ordenamiento de fincas, parcelas o patios que permite proyectar acciones ambientales y económicas acordes a las potencialidades identificadas en las fincas, parcelas o patios. El plan hace pensar en el futuro y lo más importante en cómo alcanzarlo, a través de metas concretas.\nPasos para elaborar el Plan de la Finca:\n1. Dibujo de la finca: Con sus linderos, lotes, obras de conservación (si hay), fuentes de agua, infraestructura (casa, beneficio, letrina), otros aspectos importantes, limitantes o problemas ambientales que existen.\n2. Descripción de cada lote o parcela de la finca, cultivo existentes actualmente, topografía, pedregosidad, fertilidad, drenaje.\n3. Descripción de las limitantes y Soluciones.\n4. Calcular los costos actuales y los beneficios de los cultivos o rubros de la finca.\n5. Plantear las soluciones a las limitantes encontradas para cada lote.\n6. Idetificar los beneficios de las soluciones planteadas.\n7. Mapa de uso futuro.\n8. Proyección de beneficios de las soluciones planteadas.\n9. Cronograma de actividades para el primer año.',
-      materials: ['Libreta', 'Lápiz', 'Papelones', 'Cinta métrica', 'Nivel'],
+      materials: ['Libreta', 'Lápiz', 'Papelones', 'Cinta métrica', 'Nivel'], //Materiales de la practica, se deben separar por una coma y escribirlos entre comillas
       questions: [
+        //Preguntas sobre la practica
         {
-          title: 'El plan de finca es un instrumento que sirva para:',
+          //Aqui inicia un bloque de pregunta, se debe ocupar este mismo formato para agregar mas preguntas y separar cada bloque de pregunta
+          title: 'El plan de finca es un instrumento que sirva para:', //Titulo de la pregunta
           answers: [
-            {title: 'Sacar créditos', isCorrect: false},
+            // Posibles respuestas
+            {title: 'Sacar créditos', isCorrect: false}, //Este es un bloque de respuesta, incluye titulo y si es correcta o no
             {
               title:
                 'Ordenar y planificar las acciones en las unidades de producción.',
@@ -20,8 +24,8 @@ export const data = {
             {title: 'Llevar registros', isCorrect: false},
             {title: 'Todas las anteriores', isCorrect: false},
           ],
-        },
-      ],
+        }, //Aqui termina el bloque de pregunta
+      ], // Cada pregunta que se quiera agregar tiene que estar dentro de un bloque de datos como se muestra arriba y deben estar separador por una coma (asi como estan separados los bloques de posibles respuestas)
     },
     {
       id: 2,

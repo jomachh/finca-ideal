@@ -3,7 +3,7 @@ export const data = {
     {
       id: 1,
       title: 'Plan de Manejo sostenible de finca',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/01.png'),
       description:
         'Es una herramienta de planificación y ordenamiento de fincas, parcelas o patios que permite proyectar acciones ambientales y económicas acordes a las potencialidades identificadas en las fincas, parcelas o patios. El plan hace pensar en el futuro y lo más importante en cómo alcanzarlo, a través de metas concretas.\nPasos para elaborar el Plan de la Finca:\n1. Dibujo de la finca: Con sus linderos, lotes, obras de conservación (si hay), fuentes de agua, infraestructura (casa, beneficio, letrina), otros aspectos importantes, limitantes o problemas ambientales que existen.\n2. Descripción de cada lote o parcela de la finca, cultivo existentes actualmente, topografía, pedregosidad, fertilidad, drenaje.\n3. Descripción de las limitantes y Soluciones.\n4. Calcular los costos actuales y los beneficios de los cultivos o rubros de la finca.\n5. Plantear las soluciones a las limitantes encontradas para cada lote.\n6. Idetificar los beneficios de las soluciones planteadas.\n7. Mapa de uso futuro.\n8. Proyección de beneficios de las soluciones planteadas.\n9. Cronograma de actividades para el primer año.',
       materials: ['Libreta', 'Lápiz', 'Papelones', 'Cinta métrica', 'Nivel'],
@@ -229,7 +229,7 @@ export const data = {
     {
       id: 9,
       title: 'Cercas vivas',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/09.png'),
       description:
         'Consiste en sembrar líneas de árboles o arbustos como soporte para el alambre de púas o liso siguiendo los límites de una propiedad o marcando los límites de unas parcelas según los diferentes usos del suelo (cultivos anuales, perennes, potreros, bosques) puede estar formado solamente de especies leñosas o de una combinación de especies leñosas con postes muertos.',
       materials: [
@@ -309,7 +309,7 @@ export const data = {
     {
       id: 12,
       title: 'Zanjas de drenaje',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/12.jpg'),
       description:
         'Se definen como zanjas que acompañan a un buen drenaje o drenaje dirigido, usualmente se busca la mejor pendiente para realizar estas zanjas ( curvas a desnivel), se ubican en aquellas área donde está concentrada la mayor parte de volumen pluvial a la hora de una lluvia fuerte.',
       materials: [
@@ -353,7 +353,7 @@ export const data = {
     {
       id: 14,
       title: 'Plantas frutales',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/14.jpg'),
       description:
         'Son especies de valor nutritivo y comercial que se utilizan para diversificar la producción de las unidades de producción.',
       materials: ['Plantas frutales nativas o injertas'],
@@ -372,7 +372,7 @@ export const data = {
     {
       id: 15,
       title: 'Acequias o zanjas de infiltración.',
-      coverImage: require('../assets/02.png'),
+      coverImage: require('../assets/15.jpg'),
       description:
         'Son canales que se construyen a nivel, en dirección transversal a la pendiente, para retener, conservar y ayudar a infiltrar el agua de lluvia que cae sobre las laderas. Por esta razón se recomiendan para zonas con baja precipitación lluviosa: trópico seco y sub trópico seco.',
       materials: ['Aparato “A”', 'Cinta métrica', 'Piocha', 'Palin', 'Pala'],
